@@ -78,4 +78,13 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   config.action_mailer.default_url_options = { host: 'http://partoorg.herokuapp.com/' }
 
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['partoorg'],
+    :access_key_id => ENV['AKIAJFNGHUZ7GWXFOXUQ'],
+    :secret_access_key => ENV['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']
+  }
+}
+
 end
