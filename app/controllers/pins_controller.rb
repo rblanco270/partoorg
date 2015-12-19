@@ -24,7 +24,6 @@ class PinsController < ApplicationController
       redirect_to @pin, notice: 'Pin was successfully created.'
     else
       render :new
-    end
   end
 
   def update
